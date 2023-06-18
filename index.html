@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #cat-face {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="cat-face" width="200" height="200"></canvas>
+
+    <script>
+        const canvas = document.getElementById("cat-face");
+        const context = canvas.getContext("2d");
+
+        context.beginPath();
+        context.arc(100, 100, 90, 0, 2 * Math.PI);
+        context.fillStyle = "gray";
+        context.fill();
+
+        context.beginPath();
+        context.moveTo(40, 70);
+        context.lineTo(70, 40);
+        context.lineTo(100, 70);
+        context.lineTo(130, 40);
+        context.lineTo(160, 70);
+        context.lineWidth = 10;
+        context.lineCap = "round";
+        context.strokeStyle = "gray";
+        context.stroke();
+
+        context.beginPath();
+        context.arc(70, 90, 20, 0, 2 * Math.PI);
+        context.fillStyle = "white";
+        context.fill();
+
+        context.beginPath();
+        context.arc(130, 90, 20, 0, 2 * Math.PI);
+        context.fillStyle = "white";
+        context.fill();
+
+        context.beginPath();
+        context.moveTo(100, 110);
+        context.lineTo(90, 140);
+        context.lineTo(110, 140);
+        context.closePath();
+        context.fillStyle = "pink";
+        context.fill();
+
+        context.beginPath();
+        context.arc(100, 150, 40, 0, Math.PI);
+        context.lineWidth = 5;
+        context.lineCap = "round";
+        context.strokeStyle = "pink";
+        context.stroke();
+
+        context.beginPath();
+        context.moveTo(60, 150);
+        context.lineTo(40, 170);
+        context.moveTo(100, 150);
+        context.lineTo(100, 170);
+        context.moveTo(140, 150);
+        context.lineTo(160, 170);
+        context.lineWidth = 3;
+        context.strokeStyle = "gray";
+        context.stroke();
+    </script>
+</body>
+</html>
