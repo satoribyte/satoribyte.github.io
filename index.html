@@ -1,112 +1,16 @@
-<?php
-function generateSitemap($directory) {
-    $xml = '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
-    $xml .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' . "\n";
-    
-    $files = scandir($directory);
-    
-    foreach ($files as $file) {
-        if ($file !== '.' && $file !== '..') {
-            $path = $directory . '/' . $file;
-            $url = 'http://localhost' . $path;
-            
-            if (is_dir($path)) {
-                $url .= '/';
-                $xml .= '  <url>' . "\n";
-                $xml .= '    <loc>' . $url . '</loc>' . "\n";
-                $xml .= '  </url>' . "\n";
-                
-                $xml .= generateSitemap($path);
-            } else {
-                $xml .= '  <url>' . "\n";
-                $xml .= '    <loc>' . $url . '</loc>' . "\n";
-                $xml .= '  </url>' . "\n";
-            }
-        }
-    }
-    
-    $xml .= '</urlset>';
-    
-    return $xml;
-}
-
-$directory = '/';
-$xmlContent = generateSitemap($directory);
-
-$file = fopen('sitemap.xml', 'w');
-fwrite($file, $xmlContent);
-fclose($file);
-
-?>
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <style>
-        #cat-face {
-            border: 1px solid black;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SatoriByte</title>
 </head>
-<body onload="generateSitemap()">
-    <canvas id="cat-face" width="200" height="200"></canvas>
 
-    <script>
-        const canvas = document.getElementById("cat-face");
-        const context = canvas.getContext("2d");
-
-        context.beginPath();
-        context.arc(100, 100, 90, 0, 2 * Math.PI);
-        context.fillStyle = "gray";
-        context.fill();
-
-        context.beginPath();
-        context.moveTo(40, 70);
-        context.lineTo(70, 40);
-        context.lineTo(100, 70);
-        context.lineTo(130, 40);
-        context.lineTo(160, 70);
-        context.lineWidth = 10;
-        context.lineCap = "round";
-        context.strokeStyle = "gray";
-        context.stroke();
-
-        context.beginPath();
-        context.arc(70, 90, 20, 0, 2 * Math.PI);
-        context.fillStyle = "white";
-        context.fill();
-
-        context.beginPath();
-        context.arc(130, 90, 20, 0, 2 * Math.PI);
-        context.fillStyle = "white";
-        context.fill();
-
-        context.beginPath();
-        context.moveTo(100, 110);
-        context.lineTo(90, 140);
-        context.lineTo(110, 140);
-        context.closePath();
-        context.fillStyle = "pink";
-        context.fill();
-
-        context.beginPath();
-        context.arc(100, 150, 40, 0, Math.PI);
-        context.lineWidth = 5;
-        context.lineCap = "round";
-        context.strokeStyle = "pink";
-        context.stroke();
-
-        context.beginPath();
-        context.moveTo(60, 150);
-        context.lineTo(40, 170);
-        context.moveTo(100, 150);
-        context.lineTo(100, 170);
-        context.moveTo(140, 150);
-        context.lineTo(160, 170);
-        context.lineWidth = 3;
-        context.strokeStyle = "gray";
-        context.stroke();
-    </script>
-    <script src="sitemap.js"></script>
+<body>
+  <script src="sitemap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 </body>
+
 </html>
