@@ -1,3 +1,44 @@
+<?php
+function generateSitemap($directory) {
+    $xml = '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
+    $xml .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' . "\n";
+    
+    $files = scandir($directory);
+    
+    foreach ($files as $file) {
+        if ($file !== '.' && $file !== '..') {
+            $path = $directory . '/' . $file;
+            $url = 'http://localhost' . $path;
+            
+            if (is_dir($path)) {
+                $url .= '/';
+                $xml .= '  <url>' . "\n";
+                $xml .= '    <loc>' . $url . '</loc>' . "\n";
+                $xml .= '  </url>' . "\n";
+                
+                $xml .= generateSitemap($path);
+            } else {
+                $xml .= '  <url>' . "\n";
+                $xml .= '    <loc>' . $url . '</loc>' . "\n";
+                $xml .= '  </url>' . "\n";
+            }
+        }
+    }
+    
+    $xml .= '</urlset>';
+    
+    return $xml;
+}
+
+$directory = '/';
+$xmlContent = generateSitemap($directory);
+
+$file = fopen('sitemap.xml', 'w');
+fwrite($file, $xmlContent);
+fclose($file);
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
