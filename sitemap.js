@@ -1,34 +1,46 @@
-function generateSitemapUrls(directory, urls) {
-  var files = directory.listFiles();
+function generateSitemap() {
+  var directory = '/'; 
+  var sitemapUrls = [];
 
-  for (var i = 0; i < files.length; i++) {
-    var file = files[i];
-
-    if (file.isDirectory()) {
-      urls.push(file.getPath() + '/');
-      generateSitemapUrls(file, urls);
-    }
+  function traverseDirectory(directoryPath) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', directoryPath, true);
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4 && xhr.status === 200) {
+        var fileList = xhr.responseText.split('\n');
+        for (var i = 0; i < fileList.length; i++) {
+          var item = fileList[i].trim();
+          if (item !== '') {
+            var url = directoryPath + '/' + item;
+            if (item.indexOf('.') === -1) { // Jika item adalah folder
+              traverseDirectory(url);
+            } else { // Jika item adalah file
+              sitemapUrls.push(url);
+            }
+          }
+        }
+      }
+    };
+    xhr.send();
   }
-}
 
-var sitemapUrls = [];
-generateSitemapUrls(DriveApp.getRootFolder(), sitemapUrls);
+  traverseDirectory(directory);
 
-var xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
-xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
+  var xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
+  xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
 
-for (var i = 0; i < sitemapUrls.length; i++) {
-  xml += '  <url>\n';
-  xml += '    <loc>' + sitemapUrls[i] + '</loc>\n';
-  xml += '  </url>\n';
-}
+  for (var j = 0; j < sitemapUrls.length; j++) {
+    xml += '  <url>\n';
+    xml += '    <loc>' + sitemapUrls[j] + '</loc>\n';
+    xml += '  </url>\n';
+  }
 
-xml += '</urlset>';
+  xml += '</urlset>';
 
-var sitemapLink = document.createElement('a');
-sitemapLink.href = 'data:text/xml;charset=utf-8,' + encodeURIComponent(xml);
-sitemapLink.download = 'sitemap.xml';
-sitemapLink.innerText = 'Download Sitemap';
+  var downloadLink = document.createElement('a');
+  downloadLink.href = 'data:text/xml;charset=utf-8,' + encodeURIComponent(xml);
+  downloadLink.download = 'sitemap.xml';
+  downloadLink.innerText = 'Download Sitemap';
 
-document.body.appendChild(sitemapLink);
-
+  document.body.appendChild(downloadLink);
+          }
