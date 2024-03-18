@@ -7,10 +7,8 @@
   <meta name="theme-color" content="#F7F9F8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5, user-scalable=no">
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.7/dist/cdn.min.js"></script>
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anta&family=Varela+Round&display=swap" rel="stylesheet">
@@ -28,13 +26,28 @@
       </div>
     </header>
 
-    <main class="p-1 bg-[#F7F9F8] h-screen">
-      <h1>Hello World</h1>
+    <main class="p-1 bg-[#F7F9F8] h-screen text-xs">
+      <table class="w-full bg-white border overflow-hidden" x-data="{ tools: [] }" x-init="fetch('https://api.github.com/repos/satoribyte/satoribyte.github.io/contents/tools').then(response => response.json()).then(data => { tools = data.filter(tool => tool.name !== 'index.html') })">
+        <thead class="bg-gray-200 text-gray-700">
+          <tr>
+            <th class="py-2 px-4">Nama</th>
+            <th class="py-2 px-4">Link</th>
+          </tr>
+        </thead>
+        <tbody class="text-gray-600">
+          <template x-for="tool in tools" :key="tool.name">
+            <tr>
+              <td class="py-2 px-4" x-text="tool.name"></td>
+              <td class="py-2 px-4">
+                <a :href="tool.path" target="_blank" class="text-blue-500">Buka</a>
+              </td>
+            </tr>
+          </template>
+        </tbody>
+      </table>
     </main>
 
-
   </div>
-  <script src="https://raw.githubusercontent.com/satoribyte/satoribyte.github.io/main/inspect.element.js"></script>
 </body>
 
 </html>
