@@ -18,244 +18,246 @@
 <body>
 
   <div class="entry-content">
-    <section class="wpb-content-wrapper">
-      <div class="vc_row wpb_row vc_row-fluid">
-        <div class="wpb_column vc_column_container vc_col-sm-12">
-          <div class="vc_column-inner">
-            <div class="wpb_wrapper">
-              <div class="vc_row wpb_row vc_inner vc_row-fluid">
-                <div class="wpb_column vc_column_container vc_col-sm-2">
-                  <div class="vc_column-inner">
-                    <div class="wpb_wrapper"></div>
+    <a href="../">
+      < Home</a>
+        <section class="wpb-content-wrapper">
+          <div class="vc_row wpb_row vc_row-fluid">
+            <div class="wpb_column vc_column_container vc_col-sm-12">
+              <div class="vc_column-inner">
+                <div class="wpb_wrapper">
+                  <div class="vc_row wpb_row vc_inner vc_row-fluid">
+                    <div class="wpb_column vc_column_container vc_col-sm-2">
+                      <div class="vc_column-inner">
+                        <div class="wpb_wrapper"></div>
+                      </div>
+                    </div>
+                    <div class="wpb_column vc_column_container vc_col-sm-8">
+                      <div class="vc_column-inner">
+                        <div class="wpb_wrapper">
+                          <h2 style="text-align: center;font-family:Abril Fatface;font-weight:400;font-style:normal" class="vc_custom_heading mandiri headline center">Berapa nilai investasi saya<br />
+                            di masa depan?</h2>
+                          <div class="vc_empty_space" style="height: 16px"><span class="vc_empty_space_inner"></span></div>
+                          <div class="wpb_text_column wpb_content_element ">
+                            <div class="wpb_wrapper">
+                              <p style="text-align: center;">Disini anda dapat melakukan simulasi investasi dan melihat pertumbuhan uang anda</p>
+
+                            </div>
+                          </div>
+                          <div class="radio_toffee mandiri">
+                            <div class="mode">
+                              <label>
+                                <input type="radio" name="colorRadio" value="danasaatini" checked="checked"> Dana Anda Saat Ini
+                              </label>
+                              <label>
+                                <input type="radio" name="colorRadio" value="investasiberkala"> Investasi Berkala
+                              </label>
+                              <label>
+                                <input type="radio" name="colorRadio" value="yangharusdisiapkan"> Dana Yang Harus Disiapkan
+                              </label>
+                            </div>
+                          </div>
+
+                          <div class="wpb_text_column wpb_content_element ">
+                            <div class="wpb_wrapper">
+                              <p style="text-align: center;"></p>
+
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="wpb_column vc_column_container vc_col-sm-2">
+                      <div class="vc_column-inner">
+                        <div class="wpb_wrapper"></div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="wpb_column vc_column_container vc_col-sm-8">
-                  <div class="vc_column-inner">
+              </div>
+            </div>
+          </div>
+          <div class="vc_row wpb_row vc_row-fluid">
+            <div class="wpb_column vc_column_container vc_col-sm-3">
+              <div class="vc_column-inner">
+                <div class="wpb_wrapper"></div>
+              </div>
+            </div>
+            <div class="mandiri-form-kalkulasi-dana wpb_column vc_column_container vc_col-sm-6">
+              <div class="vc_column-inner">
+                <div class="wpb_wrapper">
+                  <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
+                  <div class="nilai-box tgrey">
+                    <div class="modename" id="modecalc1" style="display: block;">
+                      <div class="calc-component1">
+                        <span>Dana Anda saat ini</span>
+                        <div class="calc-input1">
+                          <span class='investasi-dana'>Rp</span>
+                          <input type="text" id="input-mode-1" name="input-mode-1" value="">
+                        </div>
+                      </div>
+                      <div class="calc-component2">
+                        <span>Jangka waktu investasi</span>
+                        <div class="calc-input3">
+                          <input type="text" name="" value="" class="digit1" id="input-mode-1-digit1" maxlength="2">
+                          <span class='investasi-tahun'>(/tahun)</span>
+                        </div>
+                      </div>
+                      <div class="calc-component3">
+                        <span>Profil Resiko <div class="mandiri-tooltip">?
+                            <div class="tooltip-mandiri">Ingin mengetahui Profile Resiko Anda?Klik
+                              <a style='text-decoration:underline;'> <i class="fa fa-arrow-right"></i>Disini</a>
+                            </div>
+                          </div></span>
+                        <div class="calc-input4">
+                          <select id="imbal-hasil-1" name="">
+                            <option value="7">Sangat konservatif</option>
+                            <option value="12">Konservatif</option>
+                            <option value="15">Moderat</option>
+                            <option value="19">Agresif</option>
+                          </select>
+                          <span class="select-mandiri"><i class="fa fa-sort-desc"></i></span>
+                        </div>
+                      </div>
+                      <div class="result-box ncyan">
+                        <div class="nresult-text tblue"><b>Nilai Investasi saya di masa depan</b></div>
+                        <div id="result-mode-1" class="nresult-num"></div>
+                        <span class="investasi-result">Rp</span>
+
+                      </div>
+                      <div class="mandiri-button-kalkulasi-area">
+                        <button id="hitung-mode-1" class="btn-hitung">HITUNG <i class="fa fa-arrow-right"></i></button> <button id="reset-mode-1" class="btn-reset">RESET<i class="fa fa-repeat"></i></button>
+                      </div>
+
+                    </div>
+                    <div class="modename" id="modecalc2" style="display: none;">
+                      <div class="calc-component1">
+                        <span>Dana investasi bulanan saat ini</span>
+                        <div class="calc-input2">
+                          <span class='investasi-dana'>Rp</span>
+                          <input type="text" id="input-mode-2" name="input-mode-2" value="">
+                        </div>
+                      </div>
+                      <div class="calc-component2">
+                        <span>Jangka waktu investasi</span>
+                        <div class="calc-input3">
+                          <input type="text" name="" value="" class="digit1" id="input-mode-2-digit1" maxlength="2">
+
+                          <span class='investasi-tahun'>(/tahun)</span>
+                        </div>
+                      </div>
+                      <div class="calc-component3">
+                        <span>Profil Resiko <div class="mandiri-tooltip">?
+                            <div class="tooltip-mandiri">Ingin mengetahui Profile Resiko Anda?Klik
+                              <a style='text-decoration:underline;'> <i class="fa fa-arrow-right"></i>Disini</a>
+                            </div>
+                          </div></span>
+
+                        <div class="calc-input4">
+                          <select id="imbal-hasil-2" name="">
+                            <option value="7">Sangat konservatif</option>
+                            <option value="12">Konservatif</option>
+                            <option value="15">Moderat</option>
+                            <option value="19">Agresif</option>
+                          </select>
+                          <span class="select-mandiri"><i class="fa fa-sort-desc"></i></span>
+
+                        </div>
+                      </div>
+                      <div class="result-box ncyan">
+                        <div class="nresult-text tblue"><b>Nilai investasi saya di masa depan</b></div>
+                        <div id="result-mode-2" class="nresult-num"></div>
+                        <span class="investasi-result">Rp</span>
+                      </div>
+
+                      <div class="mandiri-button-kalkulasi-area">
+                        <button id="hitung-mode-2" class="btn-hitung">HITUNG <i class="fa fa-arrow-right"></i></button> <button id="reset-mode-2" class="btn-reset">RESET<i class="fa fa-repeat"></i></button>
+                      </div>
+
+                    </div>
+                    <div class="modename" id="modecalc3" style="display: none;">
+                      <div class="calc-component1">
+                        <span>Nilai yang ingin saya capai di masa datang</span>
+                        <div class="calc-input1">
+                          <input type="text" id="input-mode-3" name="input-mode-3" value="">
+                          <span class='investasi-dana'>Rp</span>
+                        </div>
+                      </div>
+                      <div class="calc-component2">
+                        <span>Jangka waktu investasi</span>
+                        <div class="calc-input3">
+                          <input type="text" name="" value="" class="digit1" id="input-mode-3-digit1" maxlength="2">
+                          <span class='investasi-tahun'>(/tahun)</span>
+                        </div>
+                      </div>
+                      <div class="calc-component3">
+                        <span>Profil Resiko <div class="mandiri-tooltip">?
+                            <div class="tooltip-mandiri">Ingin mengetahui Profile Resiko Anda?Klik
+                              <a href='/kalkulator-finansial/profil-resiko/' style='text-decoration:underline;'> <i class="fa fa-arrow-right"></i>Disini</a>
+                            </div>
+                          </div></span>
+                        <div class="calc-input4">
+                          <select id="imbal-hasil-mode-3" name="">
+                            <option value="7">Sangat konservatif</option>
+                            <option value="12">Konservatif</option>
+                            <option value="15">Moderat</option>
+                            <option value="19">Agresif</option>
+                          </select>
+                          <span class="select-mandiri"><i class="fa fa-sort-desc"></i></span>
+                        </div>
+                      </div>
+                      <div class="result-box ncyan">
+                        <div class="nresult-text tblue"><b>Dana yang harus Anda miliki saat ini </b></div>
+                        <div id="result-mode-3-a" class="nresult-num"></div>
+                        <span class="investasi-result">Rp</span>
+                      </div>
+                      <div class="result-box ncyan">
+                        <div class="nresult-text tblue"><b>Dana yang harus saya investasikan per bulan</b></div>
+                        <div id="result-mode-3-b" class="nresult-num"></div>
+                        <span class="investasi-result">Rp</span>
+                      </div>
+                      <div class="mandiri-button-kalkulasi-area">
+                        <button id="hitung-mode-3" class="btn-hitung">HITUNG <i class="fa fa-arrow-right"></i></button> <button id="reset-mode-3" class="btn-reset">RESET<i class="fa fa-repeat"></i></button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="wpb_text_column wpb_content_element ">
                     <div class="wpb_wrapper">
-                      <h2 style="text-align: center;font-family:Abril Fatface;font-weight:400;font-style:normal" class="vc_custom_heading mandiri headline center">Berapa nilai investasi saya<br />
-                        di masa depan?</h2>
-                      <div class="vc_empty_space" style="height: 16px"><span class="vc_empty_space_inner"></span></div>
-                      <div class="wpb_text_column wpb_content_element ">
-                        <div class="wpb_wrapper">
-                          <p style="text-align: center;">Disini anda dapat melakukan simulasi investasi dan melihat pertumbuhan uang anda</p>
+                      <p style="text-align: center;"></p>
 
-                        </div>
-                      </div>
-                      <div class="radio_toffee mandiri">
-                        <div class="mode">
-                          <label>
-                            <input type="radio" name="colorRadio" value="danasaatini" checked="checked"> Dana Anda Saat Ini
-                          </label>
-                          <label>
-                            <input type="radio" name="colorRadio" value="investasiberkala"> Investasi Berkala
-                          </label>
-                          <label>
-                            <input type="radio" name="colorRadio" value="yangharusdisiapkan"> Dana Yang Harus Disiapkan
-                          </label>
-                        </div>
-                      </div>
-
-                      <div class="wpb_text_column wpb_content_element ">
-                        <div class="wpb_wrapper">
-                          <p style="text-align: center;"></p>
-
-                        </div>
-                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="wpb_column vc_column_container vc_col-sm-2">
-                  <div class="vc_column-inner">
-                    <div class="wpb_wrapper"></div>
+
+                  <div class="wpb_text_column wpb_content_element ">
+                    <div class="wpb_wrapper">
+                      <p style="text-align: center;"><em>Perhitungan diatas hanya merupakan simulasi. Tingkat imbal hasil investasi dari perhitungan simulasi tersebut bukanlah suatu jaminan, tetapi hanya merupakan indikasi berdasarkan rata-rata historis kinerja produk pada jenis reksa dana.</em></p>
+
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="vc_row wpb_row vc_row-fluid">
-        <div class="wpb_column vc_column_container vc_col-sm-3">
-          <div class="vc_column-inner">
-            <div class="wpb_wrapper"></div>
-          </div>
-        </div>
-        <div class="mandiri-form-kalkulasi-dana wpb_column vc_column_container vc_col-sm-6">
-          <div class="vc_column-inner">
-            <div class="wpb_wrapper">
-              <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
-              <div class="nilai-box tgrey">
-                <div class="modename" id="modecalc1" style="display: block;">
-                  <div class="calc-component1">
-                    <span>Dana Anda saat ini</span>
-                    <div class="calc-input1">
-                      <span class='investasi-dana'>Rp</span>
-                      <input type="text" id="input-mode-1" name="input-mode-1" value="">
-                    </div>
-                  </div>
-                  <div class="calc-component2">
-                    <span>Jangka waktu investasi</span>
-                    <div class="calc-input3">
-                      <input type="text" name="" value="" class="digit1" id="input-mode-1-digit1" maxlength="2">
-                      <span class='investasi-tahun'>(/tahun)</span>
-                    </div>
-                  </div>
-                  <div class="calc-component3">
-                    <span>Profil Resiko <div class="mandiri-tooltip">?
-                        <div class="tooltip-mandiri">Ingin mengetahui Profile Resiko Anda?Klik
-                          <a style='text-decoration:underline;'> <i class="fa fa-arrow-right"></i>Disini</a>
-                        </div>
-                      </div></span>
-                    <div class="calc-input4">
-                      <select id="imbal-hasil-1" name="">
-                        <option value="7">Sangat konservatif</option>
-                        <option value="12">Konservatif</option>
-                        <option value="15">Moderat</option>
-                        <option value="19">Agresif</option>
-                      </select>
-                      <span class="select-mandiri"><i class="fa fa-sort-desc"></i></span>
-                    </div>
-                  </div>
-                  <div class="result-box ncyan">
-                    <div class="nresult-text tblue"><b>Nilai Investasi saya di masa depan</b></div>
-                    <div id="result-mode-1" class="nresult-num"></div>
-                    <span class="investasi-result">Rp</span>
-
-                  </div>
-                  <div class="mandiri-button-kalkulasi-area">
-                    <button id="hitung-mode-1" class="btn-hitung">HITUNG <i class="fa fa-arrow-right"></i></button> <button id="reset-mode-1" class="btn-reset">RESET<i class="fa fa-repeat"></i></button>
-                  </div>
-
-                </div>
-                <div class="modename" id="modecalc2" style="display: none;">
-                  <div class="calc-component1">
-                    <span>Dana investasi bulanan saat ini</span>
-                    <div class="calc-input2">
-                      <span class='investasi-dana'>Rp</span>
-                      <input type="text" id="input-mode-2" name="input-mode-2" value="">
-                    </div>
-                  </div>
-                  <div class="calc-component2">
-                    <span>Jangka waktu investasi</span>
-                    <div class="calc-input3">
-                      <input type="text" name="" value="" class="digit1" id="input-mode-2-digit1" maxlength="2">
-
-                      <span class='investasi-tahun'>(/tahun)</span>
-                    </div>
-                  </div>
-                  <div class="calc-component3">
-                    <span>Profil Resiko <div class="mandiri-tooltip">?
-                        <div class="tooltip-mandiri">Ingin mengetahui Profile Resiko Anda?Klik
-                          <a style='text-decoration:underline;'> <i class="fa fa-arrow-right"></i>Disini</a>
-                        </div>
-                      </div></span>
-
-                    <div class="calc-input4">
-                      <select id="imbal-hasil-2" name="">
-                        <option value="7">Sangat konservatif</option>
-                        <option value="12">Konservatif</option>
-                        <option value="15">Moderat</option>
-                        <option value="19">Agresif</option>
-                      </select>
-                      <span class="select-mandiri"><i class="fa fa-sort-desc"></i></span>
-
-                    </div>
-                  </div>
-                  <div class="result-box ncyan">
-                    <div class="nresult-text tblue"><b>Nilai investasi saya di masa depan</b></div>
-                    <div id="result-mode-2" class="nresult-num"></div>
-                    <span class="investasi-result">Rp</span>
-                  </div>
-
-                  <div class="mandiri-button-kalkulasi-area">
-                    <button id="hitung-mode-2" class="btn-hitung">HITUNG <i class="fa fa-arrow-right"></i></button> <button id="reset-mode-2" class="btn-reset">RESET<i class="fa fa-repeat"></i></button>
-                  </div>
-
-                </div>
-                <div class="modename" id="modecalc3" style="display: none;">
-                  <div class="calc-component1">
-                    <span>Nilai yang ingin saya capai di masa datang</span>
-                    <div class="calc-input1">
-                      <input type="text" id="input-mode-3" name="input-mode-3" value="">
-                      <span class='investasi-dana'>Rp</span>
-                    </div>
-                  </div>
-                  <div class="calc-component2">
-                    <span>Jangka waktu investasi</span>
-                    <div class="calc-input3">
-                      <input type="text" name="" value="" class="digit1" id="input-mode-3-digit1" maxlength="2">
-                      <span class='investasi-tahun'>(/tahun)</span>
-                    </div>
-                  </div>
-                  <div class="calc-component3">
-                    <span>Profil Resiko <div class="mandiri-tooltip">?
-                        <div class="tooltip-mandiri">Ingin mengetahui Profile Resiko Anda?Klik
-                          <a href='/kalkulator-finansial/profil-resiko/' style='text-decoration:underline;'> <i class="fa fa-arrow-right"></i>Disini</a>
-                        </div>
-                      </div></span>
-                    <div class="calc-input4">
-                      <select id="imbal-hasil-mode-3" name="">
-                        <option value="7">Sangat konservatif</option>
-                        <option value="12">Konservatif</option>
-                        <option value="15">Moderat</option>
-                        <option value="19">Agresif</option>
-                      </select>
-                      <span class="select-mandiri"><i class="fa fa-sort-desc"></i></span>
-                    </div>
-                  </div>
-                  <div class="result-box ncyan">
-                    <div class="nresult-text tblue"><b>Dana yang harus Anda miliki saat ini </b></div>
-                    <div id="result-mode-3-a" class="nresult-num"></div>
-                    <span class="investasi-result">Rp</span>
-                  </div>
-                  <div class="result-box ncyan">
-                    <div class="nresult-text tblue"><b>Dana yang harus saya investasikan per bulan</b></div>
-                    <div id="result-mode-3-b" class="nresult-num"></div>
-                    <span class="investasi-result">Rp</span>
-                  </div>
-                  <div class="mandiri-button-kalkulasi-area">
-                    <button id="hitung-mode-3" class="btn-hitung">HITUNG <i class="fa fa-arrow-right"></i></button> <button id="reset-mode-3" class="btn-reset">RESET<i class="fa fa-repeat"></i></button>
-                  </div>
-                </div>
+            <div class="wpb_column vc_column_container vc_col-sm-3">
+              <div class="vc_column-inner">
+                <div class="wpb_wrapper"></div>
               </div>
-
-              <div class="wpb_text_column wpb_content_element ">
+            </div>
+          </div>
+          <div class="vc_row wpb_row vc_row-fluid">
+            <div class="wpb_column vc_column_container vc_col-sm-12">
+              <div class="vc_column-inner">
                 <div class="wpb_wrapper">
-                  <p style="text-align: center;"></p>
-
-                </div>
-              </div>
-
-              <div class="wpb_text_column wpb_content_element ">
-                <div class="wpb_wrapper">
-                  <p style="text-align: center;"><em>Perhitungan diatas hanya merupakan simulasi. Tingkat imbal hasil investasi dari perhitungan simulasi tersebut bukanlah suatu jaminan, tetapi hanya merupakan indikasi berdasarkan rata-rata historis kinerja produk pada jenis reksa dana.</em></p>
-
+                  <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
+                  <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="wpb_column vc_column_container vc_col-sm-3">
-          <div class="vc_column-inner">
-            <div class="wpb_wrapper"></div>
-          </div>
-        </div>
-      </div>
-      <div class="vc_row wpb_row vc_row-fluid">
-        <div class="wpb_column vc_column_container vc_col-sm-12">
-          <div class="vc_column-inner">
-            <div class="wpb_wrapper">
-              <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
-              <div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        </section>
   </div>
 
 
-
+  <small>Copyright <a href="https://mandiri-investasi.co.id/id/kalkulator-finansial/">Mandiri Investasi</a></small>
 
   <!-- Script -->
   <script type='text/javascript' src='https://mandiri-investasi.co.id/wp-includes/js/jquery/jquery.min.js?ver=3.7.0' id='jquery-core-js'></script>
