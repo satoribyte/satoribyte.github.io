@@ -1,1 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Satoribyte - EBITDA Kalkulator</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 h-screen flex flex-col justify-center items-center">
+  <a href="../">
+    < Home</a>
+      <div class="bg-white p-8 rounded-lg shadow-md max-w-md w-full">
+        <h2 class="text-2xl font-bold mb-4 text-center">EBITDA Calculator</h2>
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label for="netIncome" class="block mb-1">Net Income:</label>
+            <input type="number" id="netIncome" class="w-full py-2 px-4 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500" placeholder="Enter net income">
+          </div>
+          <div>
+            <label for="interest" class="block mb-1">Interest Expense:</label>
+            <input type="number" id="interest" class="w-full py-2 px-4 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500" placeholder="Enter interest expense">
+          </div>
+          <div>
+            <label for="tax" class="block mb-1">Tax Expense:</label>
+            <input type="number" id="tax" class="w-full py-2 px-4 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500" placeholder="Enter tax expense">
+          </div>
+          <div>
+            <label for="depreciation" class="block mb-1">Depreciation Expense:</label>
+            <input type="number" id="depreciation" class="w-full py-2 px-4 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500" placeholder="Enter depreciation expense">
+          </div>
+          <div>
+            <label for="amortization" class="block mb-1">Amortization Expense:</label>
+            <input type="number" id="amortization" class="w-full py-2 px-4 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500" placeholder="Enter amortization expense">
+          </div>
+        </div>
+        <button class="w-full mt-6 py-2 px-4 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none focus:bg-blue-600" onclick="calculateEBITDA()">Calculate EBITDA</button>
+        <div class="text-center mt-4" id="result"></div>
+      </div>
+
+      <script>
+        function calculateEBITDA() {
+          const netIncome = parseFloat(document.getElementById('netIncome').value) || 0;
+          const interest = parseFloat(document.getElementById('interest').value) || 0;
+          const tax = parseFloat(document.getElementById('tax').value) || 0;
+          const depreciation = parseFloat(document.getElementById('depreciation').value) || 0;
+          const amortization = parseFloat(document.getElementById('amortization').value) || 0;
+
+          const ebitda = netIncome + interest + tax + depreciation + amortization;
+
+          document.getElementById('result').innerHTML = `<p class="text-lg font-bold">EBITDA: ${ebitda.toFixed(2)}</p>`;
+        }
+      </script>
+</body>
+
+</html>
