@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html class="scroll-smooth focus:scroll-auto select-none">
+
+<head>
+  <title>Deni Gentar Candana</title>
+  <meta charset="UTF-8">
+  <meta name="theme-color" content="#202938">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5, user-scalable=no">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://satoribyte.github.io/mediaInteraction.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.7/dist/cdn.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Anta&family=Varela+Round&display=swap" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://imgtr.ee/images/2024/03/19/06ca232de3b542b4810a32990bbdecd8.jpeg">
+</head>
+
+<body class="bg-slate-100 text-base sm:text-sm md:text-lg lg:text-xl " style="font-family: " Varela Round", sans-serif;">
+
+  <!-- Header -->
+  <header class="bg-gray-800 text-white z-50 p-4 sticky top-0">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-xl font-semibold" style='font-family: "Anta", sans-serif;'>DGC</h1>
+      <nav>
+        <ul class="flex space-x-4 text-xs">
+          <li><a href="#" class="hover:text-gray-300">Tentang</a></li>
+          <li><a href="#" class="hover:text-gray-300">Galeri</a></li>
+          <li><a href="#" class="hover:text-gray-300">Kontak</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container mx-auto mb-8 border-b bg-cover bg-center" style="background-image: url('https://media0.giphy.com/media/bwlDHAXWbCtqJrMlXH/giphy.gif?cid=6c09b952hdnqsstxbr4xqno3xd19pfd18igj4uanyxx4vwmp&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g');" x-data="{ name: 'Deni Gentar Candana', job: '<i class=&quot;ri-cup-line&quot;></i> Barista' }">
+    <div class="flex flex-col h-full py-8 sm:flex-row justify-center items-center backdrop-blur-sm">
+      <img src="https://imgtr.ee/images/2024/03/19/06ca232de3b542b4810a32990bbdecd8.jpeg" alt="Deni Gentar Candana" class="w-40 h-40 p-1 mb-2 rounded border-2 border-white sm:mr-4 sm:mb-0">
+      <div>
+        <h1 class="text-2xl font-semibold text-white" x-text="name" style="font-family: 'Anta', sans-serif;"></h1>
+        <p class="text-xs text-gray-600 text-slate-200" x-html="job"></p>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+  <!-- Main -->
+  <main class="container h-screen mx-auto">
+    <h1>Hello world</h1>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-slate-300 text-slate-100 text-xs py-4 mt-8" x-data="{ year: new Date().getFullYear(), title: document.title }">
+    <div class="container mx-auto text-center">
+      <p x-text="'© ' + year + '. ' + title + '. Semua Hak Dilindungi.'"></p>
+    </div>
+  </footer>
+</body>
+
+</html>
