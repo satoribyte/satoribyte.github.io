@@ -27,7 +27,7 @@
       </div>
     </header>
 
-    <main class="p-1 bg-[#F7F9F8] h-screen text-xs">
+    <main class="p-1 bg-[#F7F9F8] text-xs">
       <table class="w-full bg-white border overflow-hidden" x-data="{ tools: [] }" x-init="fetch('https://api.github.com/repos/satoribyte/satoribyte.github.io/contents/tools').then(response => response.json()).then(data => { tools = data.filter(tool => tool.name !== 'index.html') })">
         <thead class="bg-gray-200 text-gray-700">
           <tr>
