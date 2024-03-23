@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalkulator Gaji</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 p-4">
+<a href="../">< Home</a>
+  <div class="max-w-md mx-auto bg-white p-8 rounded-md shadow-md">
+    <h2 class="text-xl font-semibold mb-4">Kalkulator Gaji</h2>
+
+    <div class="mb-4">
+      <label for="monthlySalary" class="block font-medium mb-1">Gaji per Bulan (IDR):</label>
+      <input type="number" id="monthlySalary" class="w-full border-gray-300 rounded-md p-2" placeholder="Contoh: 5000000" required>
+    </div>
+
+    <div class="mb-4">
+      <label for="hoursWorked" class="block font-medium mb-1">Jam Kerja per Hari:</label>
+      <input type="number" id="hoursWorked" class="w-full border-gray-300 rounded-md p-2" placeholder="Contoh: 8">
+    </div>
+
+    <div class="mb-4">
+      <label for="workDaysInMonth" class="block font-medium mb-1">Hari Kerja dalam Sebulan:</label>
+      <input type="number" id="workDaysInMonth" class="w-full border-gray-300 rounded-md p-2" placeholder="Contoh: 25">
+    </div>
+
+    <button onclick="calculateSalary()" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Hitung</button>
+
+    <div id="result" class="mt-4"></div>
+
+  </div>
+
+  <script>
+    function calculateSalary() {
+      const monthlySalary = parseInt(document.getElementById('monthlySalary').value);
+      const hoursWorked = parseInt(document.getElementById('hoursWorked').value);
+      const workDaysInMonth = parseInt(document.getElementById('workDaysInMonth').value);
+
+      const workHoursInDay = hoursWorked;
+
+      const totalWorkHours = workDaysInMonth * workHoursInDay;
+      const hourlyRate = monthlySalary / totalWorkHours;
+      const dailySalary = hourlyRate * workHoursInDay;
+
+      document.getElementById('result').innerHTML = `
+        <p class="font-semibold">Bayaran per Hari: IDR ${dailySalary.toLocaleString()}</p>
+        <p class="font-semibold">Bayaran per Jam: IDR ${hourlyRate.toLocaleString()}</p>
+      `;
+    }
+  </script>
+
+</body>
+
+</html>
