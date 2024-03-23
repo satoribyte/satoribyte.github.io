@@ -9,49 +9,134 @@
 </head>
 
 <body class="bg-gray-100 p-4">
-<a href="../">< Home</a>
-  <div class="max-w-md mx-auto bg-white p-8 rounded-md shadow-md">
-    <h2 class="text-xl font-semibold mb-4">Kalkulator Gaji</h2>
+  <a href="../">
+    < Home</a>
+      <div class="max-w-md mx-auto bg-white p-8 rounded-md shadow-md">
+        <h2 class="text-xl font-semibold mb-4">Kalkulator Gaji</h2>
 
-    <div class="mb-4">
-      <label for="monthlySalary" class="block font-medium mb-1">Gaji per Bulan (IDR):</label>
-      <input type="number" id="monthlySalary" class="w-full border-gray-300 rounded-md p-2" placeholder="Contoh: 5000000" required>
-    </div>
+        <div class="mb-4">
+          <label for="monthlySalary" class="block font-medium mb-1">Gaji per Bulan (IDR):</label>
+          <input type="number" id="monthlySalary" class="w-full border-gray-300 rounded-md p-2" placeholder="Contoh: 5000000" required>
+        </div>
 
-    <div class="mb-4">
-      <label for="hoursWorked" class="block font-medium mb-1">Jam Kerja per Hari:</label>
-      <input type="number" id="hoursWorked" class="w-full border-gray-300 rounded-md p-2" placeholder="Contoh: 8">
-    </div>
+        <div class="mb-4">
+          <label for="hoursWorked" class="block font-medium mb-1">Jam Kerja per Hari:</label>
+          <input type="number" id="hoursWorked" class="w-full border-gray-300 rounded-md p-2" placeholder="Contoh: 8" min="1" max="24">
+        </div>
 
-    <div class="mb-4">
-      <label for="workDaysInMonth" class="block font-medium mb-1">Hari Kerja dalam Sebulan:</label>
-      <input type="number" id="workDaysInMonth" class="w-full border-gray-300 rounded-md p-2" placeholder="Contoh: 25">
-    </div>
+        <div class="mb-4">
+          <label for="workDaysInMonth" class="block font-medium mb-1">Hari Kerja dalam Sebulan:</label>
+          <input type="number" id="workDaysInMonth" class="w-full border-gray-300 rounded-md p-2" placeholder="Contoh: 25" min="1" max="31">
+        </div>
 
-    <button onclick="calculateSalary()" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Hitung</button>
+        <button onclick="calculateSalary()" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Hitung</button>
 
-    <div id="result" class="mt-4"></div>
+        <div id="result" class="mt-4"></div>
 
-  </div>
+      </div>
 
-  <script>
-    function calculateSalary() {
-      const monthlySalary = parseInt(document.getElementById('monthlySalary').value);
-      const hoursWorked = parseInt(document.getElementById('hoursWorked').value);
-      const workDaysInMonth = parseInt(document.getElementById('workDaysInMonth').value);
+      <script>
+        function calculateSalary() {
+          const monthlySalary = parseInt(document.getElementById('monthlySalary').value);
+          const hoursWorked = parseInt(document.getElementById('hoursWorked').value);
+          const workDaysInMonth = parseInt(document.getElementById('workDaysInMonth').value);
 
-      const workHoursInDay = hoursWorked;
+          // Validasi input
+          if (!monthlySalary || !hoursWorked || !workDaysInMonth) {
+            alert("Silakan lengkapi semua kolom input.");
+            return;
+          }
 
-      const totalWorkHours = workDaysInMonth * workHoursInDay;
-      const hourlyRate = monthlySalary / totalWorkHours;
-      const dailySalary = hourlyRate * workHoursInDay;
+          // Validasi jam kerja per hari
+          if (hoursWorked < 1 || hoursWorked > 24) {
+            alert("Jam kerja per hari harus di antara 1 dan 24 jam.");
+            return;
+          }
 
-      document.getElementById('result').innerHTML = `
-        <p class="font-semibold">Bayaran per Hari: IDR ${dailySalary.toLocaleString()}</p>
-        <p class="font-semibold">Bayaran per Jam: IDR ${hourlyRate.toLocaleString()}</p>
-      `;
-    }
-  </script>
+          // Validasi hari kerja dalam sebulan
+          if (workDaysInMonth < 1 || workDaysInMonth > 31) {
+            alert("Hari kerja dalam sebulan harus di antara 1 dan 31 hari.");
+            return;
+          }
+
+          const workHoursInDay = hoursWorked;
+
+          const totalWorkHours = workDaysInMonth * workHoursInDay;
+          const hourlyRate = monthlySalary / totalWorkHours;
+          const dailySalary = hourlyRate * workHoursInDay;
+
+          const resultHtml = `
+            <table class="w-full mt-4">
+              <tr>
+                <td class="font-semibold">Gaji per Tahun</td>
+                <td>IDR ${(monthlySalary * 12).toLocaleString()}</td>
+              </tr>
+              <tr>
+                <td class="font-semibold">Gaji per Kuartal</td>
+                <td>IDR ${(monthlySalary * 3).toLocaleString()}</td>
+              </tr>
+              <tr>
+                <td class="font-semibold">Gaji per Bulan</td>
+                <td>IDR ${monthlySalary.toLocaleString()}</td>
+              </tr>
+              <tr>
+                <td class="font-semibold">Gaji dalam 3 Minggu</td>
+                <td>IDR ${(monthlySalary / 4 * 3).toLocaleString()}</td>
+              </tr>
+              <tr>
+                <td class="font-semibold">Gaji dalam 1 Minggu</td>
+                <td>IDR ${(monthlySalary / 4).toLocaleString()}</td>
+              </tr>
+              <tr>
+                <td class="font-semibold">Gaji dalam 1 Hari</td>
+                <td>IDR ${dailySalary.toLocaleString()}</td>
+              </tr>
+              <tr>
+                <td class="font-semibold">Gaji per 12 Jam</td>
+                <td>IDR ${(hourlyRate * 12).toLocaleString()}</td>
+              </tr>
+              <tr>
+                <td class="font-semibold">Gaji per 6 Jam</td>
+                <td>IDR ${(hourlyRate * 6).toLocaleString()}</td>
+              </tr>
+              <tr>
+                <td class="font-semibold">Gaji per 3 Jam</td>
+                <td>IDR ${(hourlyRate * 3).toLocaleString()}</td>
+              </tr>
+              <tr>
+                <td class="font-semibold">Gaji per Jam</td>
+                <td>IDR ${hourlyRate.toLocaleString()}</td>
+              </tr>
+              <tr>
+                <td class="font-semibold">Gaji per 45 Menit</td>
+                <td>IDR ${(hourlyRate * 0.75).toLocaleString()}</td>
+              </tr>
+              <tr>
+                <td class="font-semibold">Gaji per 30 Menit</td>
+                <td>IDR ${(hourlyRate * 0.5).toLocaleString()}</td>
+              </tr>
+              <tr>
+                <td class="font-semibold">Gaji per 25 Menit</td>
+                <td>IDR ${(hourlyRate * (25 / 60)).toLocaleString()}</td>
+              </tr>
+              <tr>
+                <td class="font-semibold">Gaji per 15 Menit</td>
+                <td>IDR ${(hourlyRate * 0.25).toLocaleString()}</td>
+              </tr>
+              <tr>
+                <td class="font-semibold">Gaji per 5 Menit</td>
+                <td>IDR ${(hourlyRate * (5 / 60)).toLocaleString()}</td>
+              </tr>
+              <tr>
+                <td class="font-semibold">Gaji per 30 Detik</td>
+                <td>IDR ${(hourlyRate * (1 / 120)).toLocaleString()}</td>
+              </tr>
+            </table>
+          `;
+
+          document.getElementById('result').innerHTML = resultHtml;
+        }
+      </script>
 
 </body>
 
