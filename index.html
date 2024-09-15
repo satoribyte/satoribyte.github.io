@@ -1,55 +1,415 @@
 <!DOCTYPE html>
-<html class="scroll-smooth focus:scroll-auto select-none">
+<html lang="en">
 
 <head>
-  <title>SATORIBYTE - Penikmat Teknologi dan Keuangan</title>
-  <meta charset="UTF-8">
-  <meta name="theme-color" content="#F7F9F8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5, user-scalable=no">
-  <meta name="google-site-verification" content="Sy_x3kUooH1n7yL8gEQppd8lMWuze6LB1P-uh8-Yy-M" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.7/dist/cdn.min.js"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anta&family=Varela+Round&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="google-site-verification" content="Sy_x3kUooH1n7yL8gEQppd8lMWuze6LB1P-uh8-Yy-M" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SatoriByte - Your Ultimate Source for Cutting-Edge IT and Technology Insights">
+    <meta name="keywords" content="IT, Technology, Cybersecurity, Programming, Hacking, Tech Blog">
+    <meta name="author" content="SatoriByte">
+    <meta name="theme-color" content="#121E2E">
+    <meta property="og:title" content="SatoriByte - Technology Insights">
+    <meta property="og:description" content="Explore the latest trends and insights in IT and technology with SatoriByte.">
+    <meta property="og:image" content="https://l.top4top.io/p_3180q62ik1.png">
+    <meta property="og:url" content="https://www.yourwebsite.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SatoriByte - Technology Insights">
+    <meta name="twitter:description" content="Explore the latest trends and insights in IT and technology with SatoriByte.">
+    <meta name="twitter:image" content="https://l.top4top.io/p_3180q62ik1.png">
+    <title>SatoriByte - Technology Insights</title>
+    <link rel="icon" href="https://l.top4top.io/p_3180q62ik1.png" type="image/png">
+    <link rel="icon" href="https://l.top4top.io/p_3180q62ik1.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400&family=Roboto:wght@700&display=swap">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Fira Code', monospace;
+            background: linear-gradient(135deg, #0d1117, #161b22);
+            color: #c9d1d9;
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            color: #58a6ff;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #39ff14;
+            text-decoration: underline;
+        }
+
+        button {
+            transition: background-color 0.3s, color 0.3s ease;
+        }
+
+        #blog-list div:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+
+        .hero-bg {
+            background-image: url('https://k.top4top.io/p_3180ll2gk1.gif');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-text {
+            font-family: 'Roboto', sans-serif;
+        }
+
+
+
+        .terminal-font {
+            font-family: 'Fira Code', monospace;
+        }
+
+        .glassx {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border: 1px solid rgba(0, 0, 0, 0.3);
+        }
+    </style>
 </head>
 
-<body class="bg-slate-100" style="font-family: " Varela Round", sans-serif;">
-  <div class="md:container md:mx-auto">
+<body class="select-none">
+    <!-- Header -->
+    <header class="bg-gray-900 p-4 sticky shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-bold text-green-400">SatoriByte</h1>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#" class="text-gray-400 hover:text-green-400 transition">Home</a>
+                <a href="#footer" class="text-gray-400 hover:text-green-400 transition">About</a>
+                <a href="#footer" class="text-gray-400 hover:text-green-400 transition">Contact</a>
+            </nav>
+            <!-- Mobile menu button -->
+            <button id="menu-toggle" class="md:hidden text-gray-400 focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
 
-    <header class="h-60 border-b bg-[url('https://github.com/satoribyte/satoribyte.github.io/raw/main/l378c04F2fjeZ7vH2.webp')] bg-cover bg-center ">
-      <div class="h-full flex flex-col items-center justify-center backdrop-blur-sm py-0.5">
-        <h1 class="font-bold uppercase text-6xl" style='font-family: "Anta", sans-serif;'>
-          SATORI<small class="font-normal">BYTE</small>
-        </h1>
-        <small>Technology and Finance</small>
-<span class="text-xs italic text-slate-400">[Dev]<a href="https://www.instagram.com/denigentarcandana.id" target="_blank" class="text-cyan-300">@denigentarcandana.id</a>
-      </div>
+        <!-- Mobile menu -->
+        <nav id="mobile-menu" class="hidden md:hidden mt-4 bg-gray-800 p-4 rounded-lg shadow-lg">
+            <a href="#" class="block py-2 text-gray-400 hover:text-green-400">Home</a>
+            <a href="#footer" class="block py-2 text-gray-400 hover:text-green-400">About</a>
+            <a href="#footer" class="block py-2 text-gray-400 hover:text-green-400">Contact</a>
+        </nav>
     </header>
 
-    <main class="p-1 bg-[#F7F9F8] text-xs">
-      <table class="w-full bg-white border overflow-hidden" x-data="{ tools: [] }" x-init="fetch('https://api.github.com/repos/satoribyte/satoribyte.github.io/contents/tools').then(response => response.json()).then(data => { tools = data.filter(tool => tool.name !== 'index.html') })">
-        <thead class="bg-gray-200 text-gray-700">
-          <tr>
-            <th class="py-2 px-4">Name</th>
-            <th class="py-2 px-4">Link</th>
-          </tr>
-        </thead>
-        <tbody class="text-gray-600">
-          <template x-for="tool in tools" :key="tool.name">
-            <tr>
-              <td class="py-2 px-4" x-text="tool.name.split('-').map(name => name.charAt(0).toUpperCase() + name.slice(1)).join(' ').replace('.html', '')"></td>
-              <td class="py-2 px-4">
-                <a :href="tool.path" target="_blank" class="text-blue-500">OPEN</a>
-              </td>
-            </tr>
-          </template>
-        </tbody>
-      </table>
+    <!-- Hero Section -->
+    <section class="hero-bg relative h-80  text-center bg-cover bg-no-repeat bg-center relative">
+        <div class="glassx flex flex-col items-center justify-end h-full p-4 z-10 hero-content">
+            <p class="text-xl md:text-2xl mb-8">
+                Your Ultimate Source for Cutting-Edge IT and Technology Insights
+            </p>
+            <a href="#main-content" class="px-5 py-3 bg-green-500 text-black font-semibold rounded-lg shadow-lg hover:bg-green-400 transition">
+                Explore Now
+            </a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main id="main-content" class="container mx-auto p-6">
+        <div class="flex flex-col md:flex-row">
+            <!-- Sidebar -->
+            <aside class="md:w-1/4 relative px-4 bg-gray-800 rounded-lg shadow-lg mb-6 md:w-64 md:h-full md:mb-0 md:mr-4 h-96 overflow-y-auto">
+                <h2 class="text-lg font-semibold py-4 mb-4 bg-gray-800 sticky top-0 left-0 right-0 text-green-400">Categories</h2>
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3 p-2 bg-gray-700 rounded-lg hover:bg-gray-600">
+                        <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                        </svg>
+                        <a href="#" class="text-gray-300 hover:text-green-400">Security</a>
+                    </div>
+                    <div class="flex items-center space-x-3 p-2 bg-gray-700 rounded-lg hover:bg-gray-600">
+                        <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                        </svg>
+                        <a href="#" class="text-gray-300 hover:text-green-400">Cryptography</a>
+                    </div>
+                    <div class="flex items-center space-x-3 p-2 bg-gray-700 rounded-lg hover:bg-gray-600">
+                        <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                        </svg>
+                        <a href="#" class="text-gray-300 hover:text-green-400">Linux</a>
+                    </div>
+                    <div class="flex items-center space-x-3 p-2 bg-gray-700 rounded-lg hover:bg-gray-600">
+                        <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                        </svg>
+                        <a href="#" class="text-gray-300 hover:text-green-400">Programming</a>
+                    </div>
+                    <div class="flex items-center space-x-3 p-2 bg-gray-700 rounded-lg hover:bg-gray-600">
+                        <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                        </svg>
+                        <a href="#" class="text-gray-300 hover:text-green-400">Penetration Testing</a>
+                    </div>
+                    <div class="flex items-center space-x-3 p-2 bg-gray-700 rounded-lg hover:bg-gray-600">
+                        <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                        </svg>
+                        <a href="#" class="text-gray-300 hover:text-green-400">Network Security</a>
+                    </div>
+                    <div class="flex items-center space-x-3 p-2 bg-gray-700 rounded-lg hover:bg-gray-600">
+                        <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                        </svg>
+                        <a href="#" class="text-gray-300 hover:text-green-400">Exploits</a>
+                    </div>
+                    <div class="flex items-center space-x-3 p-2 bg-gray-700 rounded-lg hover:bg-gray-600">
+                        <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                        </svg>
+                        <a href="#" class="text-gray-300 hover:text-green-400">Social Engineering</a>
+                    </div>
+                    <div class="flex items-center space-x-3 p-2 bg-gray-700 rounded-lg hover:bg-gray-600">
+                        <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                        </svg>
+                        <a href="#" class="text-gray-300 hover:text-green-400">Web Application Security</a>
+                    </div>
+                    <div class="flex items-center space-x-3 p-2 bg-gray-700 rounded-lg hover:bg-gray-600">
+                        <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                        </svg>
+                        <a href="#" class="text-gray-300 hover:text-green-400">Reverse Engineering</a>
+                    </div>
+                    <div class="flex items-center space-x-3 p-2 bg-gray-700 rounded-lg hover:bg-gray-600">
+                        <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                        </svg>
+                        <a href="#" class="text-gray-300 hover:text-green-400">Hacking Tools</a>
+                    </div>
+                    <div class="flex items-center space-x-3 p-2 bg-gray-700 rounded-lg hover:bg-gray-600">
+                        <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                        </svg>
+                        <a href="#" class="text-gray-300 hover:text-green-400">Malware Analysis</a>
+                    </div>
+                    <div class="flex items-center space-x-3 p-2 bg-gray-700 rounded-lg hover:bg-gray-600">
+                        <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                        </svg>
+                        <a href="#" class="text-gray-300 hover:text-green-400">Cloud Security</a>
+                    </div>
+                    <div class="flex items-center space-x-3 p-2 bg-gray-700 rounded-lg hover:bg-gray-600">
+                        <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                        </svg>
+                        <a href="#" class="text-gray-300 hover:text-green-400">Mobile Security</a>
+                    </div>
+                    <div class="flex items-center space-x-3 p-2 bg-gray-700 rounded-lg hover:bg-gray-600">
+                        <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                        </svg>
+                        <a href="#" class="text-gray-300 hover:text-green-400">Dark Web</a>
+                    </div>
+                    <div class="flex items-center space-x-3 p-2 bg-gray-700 rounded-lg hover:bg-gray-600">
+                        <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                        </svg>
+                        <a href="#" class="text-gray-300 hover:text-green-400">Bug Bounty</a>
+                    </div>
+                    <div class="flex items-center space-x-3 p-2 bg-gray-700 rounded-lg hover:bg-gray-600">
+                        <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                        </svg>
+                        <a href="#" class="text-gray-300 hover:text-green-400">Ethical Hacking</a>
+                    </div>
+                    <div class="flex items-center space-x-3 p-2 bg-gray-700 rounded-lg hover:bg-gray-600">
+                        <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                        </svg>
+                        <a href="#" class="text-gray-300 hover:text-green-400">Phishing</a>
+                    </div>
+                    <div class="flex items-center space-x-3 p-2 bg-gray-700 rounded-lg hover:bg-gray-600">
+                        <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                        </svg>
+                        <a href="#" class="text-gray-300 hover:text-green-400">IoT Security</a>
+                    </div>
+                    <div class="flex items-center space-x-3 p-2 bg-gray-700 rounded-lg hover:bg-gray-600">
+                        <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                        </svg>
+                        <a href="#" class="text-gray-300 hover:text-green-400">Data Privacy</a>
+                    </div>
+                </div>
+            </aside>
+
+
+            <!-- Main Section -->
+            <section class="md:w-3/4">
+                <h2 class="text-2xl font-semibold mb-4 text-green-400 border-b border-gray-700 pb-2">Recent Posts</h2>
+                <div id="blog-list" class="space-y-4">
+                    <!-- Blog posts will be injected here -->
+                </div>
+
+                <!-- Pagination -->
+                <div class="flex justify-between mt-6">
+                    <button id="prev-btn" class="px-4 py-2 bg-green-500 text-white font-semibold rounded-lg shadow-lg hover:bg-green-400 transition">
+                        Previous
+                    </button>
+                    <button id="next-btn" class="px-4 py-2 bg-green-500 text-white font-semibold rounded-lg shadow-lg hover:bg-green-400 transition">
+                        Next
+                    </button>
+                </div>
+            </section>
+        </div>
     </main>
 
-  </div>
+    <!-- Footer -->
+    <footer class="bg-gray-900 p-6 mt-8 text-gray-300 border-t border-gray-700" id="footer">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between">
+            <!-- About Section -->
+            <div class="mb-6 md:mb-0 md:w-1/2">
+                <h2 class="text-lg font-semibold mb-4 text-green-400">About SatoriByte</h2>
+                <p class="mb-4">
+                    SatoriByte is your ultimate source for cutting-edge insights into the world of IT and technology. We cover a wide range of topics including cybersecurity, programming, networking, and much more. Our mission is to provide high-quality, technical content to help tech enthusiasts, professionals, and learners stay updated with the latest trends and advancements in the tech industry.
+                </p>
+                <p>
+                    From detailed guides and tutorials to the latest industry news and analyses, SatoriByte aims to be a comprehensive resource for all your tech-related needs. Whether you're a seasoned professional or just starting out, we have something for everyone.
+                </p>
+            </div>
+
+            <!-- Contact Section -->
+            <div>
+                <h2 class="text-lg font-semibold mb-4 text-green-400">Contact Us</h2>
+                <p class="mb-2">Have questions or feedback? Reach out to us:</p>
+                <p>
+                    <a href="mailto:Satoribyte@gmail.com" class="text-blue-400 hover:text-green-400 transition">Satoribyte@gmail.com</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="text-center mt-8">
+            <p>&copy; <span id="current-year"></span> SatoriByte. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        (() => {
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+        })();
+    </script>
+
+    <script>
+        (function() {
+            var sP = false;
+
+            try {
+                var o = Object.defineProperty({}, 'passive', {
+                    get: function() { sP = true; }
+                });
+                window.addEventListener("test", null, o);
+            } catch (e) {}
+
+            var yS = 0,
+                pD = false;
+
+            function pTR(e) {
+                if (pD && e.cancelable) {
+                    e.preventDefault();
+                }
+            }
+
+            document.addEventListener('touchstart', function(e) {
+                if (e.touches.length === 1) {
+                    yS = e.touches[0].clientY;
+                    pD = window.pageYOffset === 0;
+                }
+            }, sP ? { passive: true } : false);
+
+            document.addEventListener('touchmove', function(e) {
+                var cY = e.touches[0].clientY;
+                if (pD && cY > yS) {
+                    pTR(e);
+                }
+            }, sP ? { passive: false } : false);
+
+            document.addEventListener('touchend', function() {
+                pD = false;
+            });
+        })();
+    </script>
+
+    <script>
+        (() => {
+            const b = [
+                { t: 'Post 1', c: 'Introduction to Cybersecurity', d: '2024-09-01' },
+                { t: 'Post 2', c: 'Understanding Cryptography', d: '2024-08-31' },
+                { t: 'Post 3', c: 'Basics of Penetration Testing', d: '2024-08-30' },
+                { t: 'Post 4', c: 'Getting Started with Linux', d: '2024-08-29' },
+                { t: 'Post 5', c: 'Advanced Exploitation Techniques', d: '2024-08-28' },
+                { t: 'Post 6', c: 'Introduction to Reverse Engineering', d: '2024-08-27' },
+                { t: 'Post 7', c: 'Exploit Development', d: '2024-08-30' },
+                { t: 'Post 8', c: 'Network Security Fundamentals', d: '2024-08-28' }
+        ];
+
+            const ppp = 7;
+            let cp = 1;
+            const tp = b.length;
+            const tp2 = Math.ceil(tp / ppp);
+
+            const dB = (p) => {
+                const s = (p - 1) * ppp;
+                const e = s + ppp;
+                const l = document.getElementById('blog-list');
+                l.innerHTML = '';
+
+                for (let i = s; i < e && i < tp; i++) {
+                    const bl = b[i];
+                    l.innerHTML += `
+                    <div class="p-4 bg-gray-800 rounded-lg shadow-lg">
+                        <h3 class="text-lg font-semibold mb-2">${bl.t}</h3>
+                        <p>${bl.c}</p>
+                        <p class="text-gray-400 text-sm mt-2">${bl.d}</p>
+                    </div>
+                `;
+                }
+            };
+
+            document.getElementById('prev-btn').addEventListener('click', () => {
+                if (cp > 1) {
+                    cp--;
+                    dB(cp);
+                }
+            });
+
+            document.getElementById('next-btn').addEventListener('click', () => {
+                if (cp < tp2) {
+                    cp++;
+                    dB(cp);
+                }
+            });
+
+            document.getElementById('menu-toggle').addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.toggle('hidden');
+            });
+
+            document.addEventListener('click', (e) => {
+                const t = e.target.closest('a[href^="#"]');
+                if (t) {
+                    e.preventDefault();
+                    const i = t.getAttribute('href').substring(1);
+                    const el = document.getElementById(i);
+                    if (el) {
+                        el.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            });
+
+            dB(cp);
+        })();
+    </script>
 
 </body>
 
