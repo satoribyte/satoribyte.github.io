@@ -23,7 +23,14 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400&family=Roboto:wght@700&display=swap">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        html,
         body {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
             font-family: 'Fira Code', monospace;
             background: linear-gradient(135deg, #0d1117, #161b22);
             color: #c9d1d9;
@@ -77,9 +84,8 @@
     </style>
 </head>
 
-<body class="select-none">
-    <!-- Header -->
-    <header class="bg-gray-900 p-4 sticky shadow-lg">
+<body class="select-none h-dvh">
+    <header class="bg-gray-900 p-4 sticky top-0 left-0 z-50 shadow-lg">
         <div class="container mx-auto flex justify-between items-center">
             <h1 class="text-3xl font-bold text-green-400">SatoriByte</h1>
             <nav class="hidden md:flex space-x-6">
@@ -87,15 +93,15 @@
                 <a href="#footer" class="text-gray-400 hover:text-green-400 transition">About</a>
                 <a href="#footer" class="text-gray-400 hover:text-green-400 transition">Contact</a>
             </nav>
-            <!-- Mobile menu button -->
             <button id="menu-toggle" class="md:hidden text-gray-400 focus:outline-none">
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2l6 10.392l-6 10.392l-6-10.392L12 2z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 8h6M9 12h6"></path>
                 </svg>
+                <small class="text-sm">menu</small>
             </button>
         </div>
 
-        <!-- Mobile menu -->
         <nav id="mobile-menu" class="hidden md:hidden mt-4 bg-gray-800 p-4 rounded-lg shadow-lg">
             <a href="#" class="block py-2 text-gray-400 hover:text-green-400">Home</a>
             <a href="#footer" class="block py-2 text-gray-400 hover:text-green-400">About</a>
@@ -119,7 +125,7 @@
     <main id="main-content" class="container mx-auto p-6">
         <div class="flex flex-col md:flex-row">
             <!-- Sidebar -->
-            <aside class="md:w-1/4 relative px-4 bg-gray-800 rounded-lg shadow-lg mb-6 md:w-64 md:h-full md:mb-0 md:mr-4 h-96 overflow-y-auto">
+            <aside class="md:w-1/4  px-4 pb-4 bg-gray-800 rounded-lg shadow-lg mb-6 md:w-64 md:h-full md:mb-0 md:mr-4 h-96 overflow-y-auto">
                 <h2 class="text-lg font-semibold py-4 mb-4 bg-gray-800 sticky top-0 left-0 right-0 text-green-400">Categories</h2>
                 <div class="space-y-4">
                     <div class="flex items-center space-x-3 p-2 bg-gray-700 rounded-lg hover:bg-gray-600">
@@ -270,7 +276,7 @@
     <footer class="bg-gray-900 p-6 mt-8 text-gray-300 border-t border-gray-700" id="footer">
         <div class="container mx-auto flex flex-col md:flex-row justify-between">
             <!-- About Section -->
-            <div class="mb-6 md:mb-0 md:w-1/2">
+            <div class="mb-6 md:mb-0 md:mr-4 md:w-1/2">
                 <h2 class="text-lg font-semibold mb-4 text-green-400">About SatoriByte</h2>
                 <p class="mb-4">
                     SatoriByte is your ultimate source for cutting-edge insights into the world of IT and technology. We cover a wide range of topics including cybersecurity, programming, networking, and much more. Our mission is to provide high-quality, technical content to help tech enthusiasts, professionals, and learners stay updated with the latest trends and advancements in the tech industry.
@@ -295,84 +301,22 @@
         </div>
     </footer>
 
-    <script src="./xrefresh.js"></script>
-    <script src="./mediaInteraction.js"></script>
     <script>
         (() => {
             document.getElementById('current-year').textContent = new Date().getFullYear();
         })();
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
+    <script>
+        eruda.init();
+    </script>
 
     <script>
         (() => {
             const b = [
-                { t: 'Post 1', c: 'Introduction to Cybersecurity', d: '2024-09-01' },
-                { t: 'Post 2', c: 'Understanding Cryptography', d: '2024-08-31' },
-                { t: 'Post 3', c: 'Basics of Penetration Testing', d: '2024-08-30' },
-                { t: 'Post 4', c: 'Getting Started with Linux', d: '2024-08-29' },
-                { t: 'Post 5', c: 'Advanced Exploitation Techniques', d: '2024-08-28' },
-                { t: 'Post 6', c: 'Introduction to Reverse Engineering', d: '2024-08-27' },
-                { t: 'Post 7', c: 'Exploit Development', d: '2024-08-30' },
-                { t: 'Post 8', c: 'Network Security Fundamentals', d: '2024-08-28' }
-        ];
-
-            const ppp = 7;
-            let cp = 1;
-            const tp = b.length;
-            const tp2 = Math.ceil(tp / ppp);
-
-            const dB = (p) => {
-                const s = (p - 1) * ppp;
-                const e = s + ppp;
-                const l = document.getElementById('blog-list');
-                l.innerHTML = '';
-
-                for (let i = s; i < e && i < tp; i++) {
-                    const bl = b[i];
-                    l.innerHTML += `
-                    <div class="p-4 bg-gray-800 rounded-lg shadow-lg">
-                        <h3 class="text-lg font-semibold mb-2">${bl.t}</h3>
-                        <p>${bl.c}</p>
-                        <p class="text-gray-400 text-sm mt-2">${bl.d}</p>
-                    </div>
-                `;
-                }
-            };
-
-            document.getElementById('prev-btn').addEventListener('click', () => {
-                if (cp > 1) {
-                    cp--;
-                    dB(cp);
-                }
-            });
-
-            document.getElementById('next-btn').addEventListener('click', () => {
-                if (cp < tp2) {
-                    cp++;
-                    dB(cp);
-                }
-            });
-
-            document.getElementById('menu-toggle').addEventListener('click', () => {
-                document.getElementById('mobile-menu').classList.toggle('hidden');
-            });
-
-            document.addEventListener('click', (e) => {
-                const t = e.target.closest('a[href^="#"]');
-                if (t) {
-                    e.preventDefault();
-                    const i = t.getAttribute('href').substring(1);
-                    const el = document.getElementById(i);
-                    if (el) {
-                        el.scrollIntoView({ behavior: 'smooth' });
-                    }
-                }
-            });
-
-            dB(cp);
-        })();
-    </script>
-
-</body>
-
-</html>
+                { c: 'Introduction to Cybersecurity', d: '2024-09-01' },
+                { c: 'Understanding Cryptography', d: '2024-08-31' },
+                { c: 'Basics of Penetration Testing', d: '2024-08-30' },
+                { c: 'Getting Started with Linux', d: '2024-08-29' },
+                { c: 'Advanced Exploitation Techniques', d: '2024-08-28' },
+                { c: 'Introduction to Reverse Engineering', d: '2024-08-27' },
