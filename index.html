@@ -320,3 +320,115 @@
                 { c: 'Getting Started with Linux', d: '2024-08-29' },
                 { c: 'Advanced Exploitation Techniques', d: '2024-08-28' },
                 { c: 'Introduction to Reverse Engineering', d: '2024-08-27' },
+                { c: 'Exploit Development', d: '2024-08-30' },
+                { c: 'Network Security Fundamentals', d: '2024-08-28' },
+                { c: 'Security Policies and Procedures', d: '2024-09-02' },
+                { c: 'Vulnerability Assessment Tools', d: '2024-09-03' },
+                { c: 'Intrusion Detection Systems', d: '2024-09-04' },
+                { c: 'Social Engineering Attacks', d: '2024-09-05' },
+                { c: 'Malware Analysis Techniques', d: '2024-09-06' },
+                { c: 'Ethical Hacking Methodologies', d: '2024-09-07' },
+                { c: 'Web Application Security', d: '2024-09-08' },
+                { c: 'Understanding Firewalls', d: '2024-09-09' },
+                { c: 'Data Encryption Best Practices', d: '2024-09-10' },
+                { c: 'Cybersecurity for IoT Devices', d: '2024-09-11' },
+                { c: 'Incident Response Planning', d: '2024-09-12' },
+                { c: 'Secure Coding Practices', d: '2024-09-13' },
+                { c: 'Cloud Security Essentials', d: '2024-09-14' },
+                { c: 'Penetration Testing Tools Overview', d: '2024-09-15' },
+                { c: 'Building a Secure Network', d: '2024-09-16' },
+                { c: 'Security Auditing Techniques', d: '2024-09-17' },
+                { c: 'Zero Trust Architecture', d: '2024-09-18' },
+                { c: 'Incident Handling Procedures', d: '2024-09-19' },
+                { c: 'Understanding Cyber Threats', d: '2024-09-20' },
+                { c: 'Data Breach Response', d: '2024-09-21' },
+                { c: 'Secure Software Development Lifecycle', d: '2024-09-22' },
+                { c: 'Privacy and Compliance', d: '2024-09-23' },
+                { c: 'Advanced Persistent Threats', d: '2024-09-24' },
+                { c: 'Understanding Risk Management', d: '2024-09-25' },
+                { c: 'Wireless Network Security', d: '2024-09-26' },
+                { c: 'Security Operations Centers', d: '2024-09-27' },
+                { c: 'Security Threat Intelligence', d: '2024-09-28' }
+];
+
+            const ppp = 13;
+            let cp = 1;
+            const tp = b.length;
+            const tp2 = Math.ceil(tp / ppp);
+
+            const dB = (p) => {
+                const s = (p - 1) * ppp;
+                const e = s + ppp;
+                const l = document.getElementById('blog-list');
+                l.innerHTML = '';
+
+                for (let i = s; i < e && i < tp; i++) {
+                    const bl = b[i];
+                    const z = (x => x.toLowerCase().replace(/\s+/g, '-') + '.html')(bl.c);
+
+                    l.innerHTML += `
+            <div class="p-4 bg-gray-800 relative rounded-lg shadow-lg">
+                <h3 class="text-lg font-semibold mb-2">${bl.c}</h3>
+                <p class="text-gray-400 text-sm mt-2">${bl.d}</p>
+                <a class="text-[#39ff14]" href="read.html?t=${z}">
+                    <small class="absolute m-4 bottom-0 right-0">Read more⟩</small>
+                </a>
+            </div>
+        `;
+                }
+            };
+
+            document.getElementById('prev-btn').addEventListener('click', () => {
+                if (cp > 1) {
+                    cp--;
+                    dB(cp);
+                }
+            });
+
+            document.getElementById('next-btn').addEventListener('click', () => {
+                if (cp < tp2) {
+                    cp++;
+                    dB(cp);
+                }
+            });
+
+            document.getElementById('menu-toggle').addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.toggle('hidden');
+            });
+
+            document.addEventListener('click', (e) => {
+                const t = e.target.closest('a[href^="#"]');
+                if (t) {
+                    e.preventDefault();
+                    const i = t.getAttribute('href').substring(1);
+                    const el = document.getElementById(i);
+                    if (el) {
+                        el.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            });
+
+            dB(cp);
+        })();
+    </script>
+    <audio id="audio" src="https://c.top4top.io/m_318074a570.mp3"></audio>
+
+    <script>
+        window.onload = () => {
+            const audio = document.getElementById('audio');
+            const links = document.querySelectorAll('a[href="#main-content"]');
+
+            links.forEach(link => {
+                link.addEventListener('click', () => {
+                    audio.play().catch(error => {
+                        console.log('Autoplay blocked:', error);
+                    });
+                });
+            });
+        }
+    </script>
+
+
+</body>
+
+</html>
