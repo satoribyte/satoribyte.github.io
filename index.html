@@ -412,21 +412,28 @@
             dB(cp);
         })();
     </script>
-    <audio id="audio" src="https://c.top4top.io/m_318074a570.mp3"></audio>
+    <audio id="audio" src="./backsound.ogg"></audio>
 
     <script>
         window.onload = () => {
-            const audio = document.getElementById('audio');
-            const links = document.querySelectorAll('a[href="#main-content"]');
+    const audio = document.getElementById('audio');
+    const links = document.querySelectorAll('a[href="#main-content"]');
 
-            links.forEach(link => {
-                link.addEventListener('click', () => {
-                    audio.play().catch(error => {
-                        console.log('Autoplay blocked:', error);
-                    });
-                });
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            audio.play().catch(error => {
+                console.log('Autoplay blocked:', error);
             });
-        }
+        });
+    });
+
+    audio.addEventListener('ended', () => {
+        audio.currentTime = 0;
+        audio.play().catch(error => {
+            console.log('Autoplay blocked after repeat:', error);
+        });
+    });
+};
     </script>
 
 
