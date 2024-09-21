@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="google" content="notranslate">
+
     <meta name="google-site-verification" content="Sy_x3kUooH1n7yL8gEQppd8lMWuze6LB1P-uh8-Yy-M" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="SatoriByte - Your Ultimate Source for Cutting-Edge IT and Technology Insights">
@@ -37,51 +37,45 @@
             color: #c9d1d9;
             margin: 0;
             padding: 0;
-        }
 
-        a {
-            color: #58a6ff;
-            transition: color 0.3s ease;
-        }
+            a {
+                color: #58a6ff;
+                transition: color 0.3s ease;
+            }
 
-        a:hover {
-            color: #39ff14;
-            text-decoration: underline;
-        }
+            a:hover {
+                color: #39ff14;
+                text-decoration: underline;
+            }
 
-        button {
-            transition: background-color 0.3s, color 0.3s ease;
-        }
+            button {
+                transition: background-color 0.3s, color 0.3s ease;
+            }
 
-        #blog-list div:hover {
-            transform: scale(1.05);
-            transition: transform 0.3s ease;
-        }
+            #blog-list div:hover {
+                transform: scale(1.05);
+                transition: transform 0.3s ease;
+            }
 
-        .hero-bg {
-            background-image: url('./herobg.avif');
-            background-size: cover;
-            background-position: center;
-        }
 
-        .hero-text {
-            font-family: 'Roboto', sans-serif;
-        }
+            .hero-text {
+                font-family: 'Roboto', sans-serif;
+            }
 
 
 
-        .terminal-font {
-            font-family: 'Fira Code', monospace;
-        }
+            .terminal-font {
+                font-family: 'Fira Code', monospace;
+            }
 
-        .glassx {
-            background: rgba(0, 0, 0, 0.2);
-            border-radius: 16px;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(5px);
-            -webkit-backdrop-filter: blur(5px);
-            border: 1px solid rgba(0, 0, 0, 0.3);
-        }
+            .glassx {
+                background: rgba(0, 0, 0, 0.2);
+                border-radius: 16px;
+                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                backdrop-filter: blur(5px);
+                -webkit-backdrop-filter: blur(5px);
+                border: 1px solid rgba(0, 0, 0, 0.3);
+            }
     </style>
 </head>
 
@@ -111,7 +105,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero-bg h-dvh relative text-center bg-cover bg-no-repeat bg-center relative">
+    <section class="h-dvh relative text-center bg-cover bg-no-repeat bg-center bg-[url('./herobg.avif')]">
         <div class="glassx flex flex-col items-center justify-end pb-36 h-full p-4 z-10 hero-content">
             <p class="text-xl md:text-2xl mb-8">
                 Your Ultimate Source for Cutting-Edge IT and Technology Insights
@@ -256,16 +250,14 @@
             <!-- Main Section -->
             <section class="md:w-3/4">
                 <h2 class="text-2xl font-semibold mb-4 text-green-400 border-b border-gray-700 pb-2">Recent Posts</h2>
-                <div id="blog-list" class="space-y-4">
-                    <!-- Blog posts will be injected here -->
-                </div>
+                <div id="blog-list" class="space-y-4"></div>
 
                 <!-- Pagination -->
                 <div class="flex justify-between mt-6">
-                    <button id="prev-btn" class="px-4 py-2 bg-green-500 text-white font-semibold rounded-lg shadow-lg hover:bg-green-400 transition">
+                    <button id="prev-btn" class="px-4 py-2 bg-green-700 text-white font-semibold rounded-lg shadow-lg hover:bg-green-600">
                         Previous
                     </button>
-                    <button id="next-btn" class="px-4 py-2 bg-green-500 text-white font-semibold rounded-lg shadow-lg hover:bg-green-400 transition">
+                    <button id="next-btn" class="px-4 py-2 bg-green-700 text-white font-semibold rounded-lg shadow-lg hover:bg-green-600">
                         Next
                     </button>
                 </div>
@@ -307,10 +299,6 @@
         (() => {
             document.getElementById('current-year').textContent = new Date().getFullYear();
         })();
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
-    <script>
-        eruda.init();
     </script>
 
     <script>
@@ -417,24 +405,24 @@
 
     <script>
         window.onload = () => {
-    const audio = document.getElementById('audio');
-    const links = document.querySelectorAll('a[href="#main-content"]');
+            const audio = document.getElementById('audio');
+            const links = document.querySelectorAll('a[href="#main-content"]');
 
-    links.forEach(link => {
-        link.addEventListener('click', () => {
-            audio.play().catch(error => {
-                console.log('Autoplay blocked:', error);
+            links.forEach(link => {
+                link.addEventListener('click', () => {
+                    audio.play().catch(error => {
+                        console.log('Autoplay blocked:', error);
+                    });
+                });
             });
-        });
-    });
 
-    audio.addEventListener('ended', () => {
-        audio.currentTime = 0;
-        audio.play().catch(error => {
-            console.log('Autoplay blocked after repeat:', error);
-        });
-    });
-};
+            audio.addEventListener('ended', () => {
+                audio.currentTime = 0;
+                audio.play().catch(error => {
+                    console.log('Autoplay blocked after repeat:', error);
+                });
+            });
+        };
     </script>
 
 
