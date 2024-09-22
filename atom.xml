@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>SatoriByte - Technology Insights</title>
+    <link href="https://satoribyte.github.io" />
+    <updated>2024-09-21T12:00:00Z</updated>
+    <author>
+        <name>SatoriByte</name>
+    </author>
+    <id>https://satoribyte.github.io/</id>
+
+    <entry>
+        <title>Security</title>
+        <link href="https://satoribyte.github.io/blog/security" />
+        <id>https://satoribyte.github.io/blog/security</id>
+        <updated>2024-09-21T12:00:00Z</updated>
+        <summary>Article about security.</summary>
+    </entry>
+
+    <entry>
+        <title>Cryptography</title>
+        <link href="https://satoribyte.github.io/blog/cryptography" />
+        <id>https://satoribyte.github.io/blog/cryptography</id>
+        <updated>2024-09-21T12:00:00Z</updated>
+        <summary>Article about cryptography.</summary>
+    </entry>
+
+    <entry>
+        <title>Linux</title>
+        <link href="https://satoribyte.github.io/blog/linux" />
+        <id>https://satoribyte.github.io/blog/linux</id>
+        <updated>2024-09-21T12:00:00Z</updated>
+        <summary>Article about Linux.</summary>
+    </entry>
+
+    <entry>
+        <title>Programming</title>
+        <link href="https://satoribyte.github.io/blog/programming" />
+        <id>https://satoribyte.github.io/blog/programming</id>
+        <updated>2024-09-21T12:00:00Z</updated>
+        <summary>Article about programming.</summary>
+    </entry>
+
+    <entry>
+        <title>Penetration Testing</title>
+        <link href="https://satoribyte.github.io/blog/penetration-testing" />
+        <id>https://satoribyte.github.io/blog/penetration-testing</id>
+        <updated>2024-09-21T12:00:00Z</updated>
+        <summary>Article about penetration testing.</summary>
+    </entry>
+
+    <entry>
+        <title>Network Security</title>
+        <link href="https://satoribyte.github.io/blog/network-security" />
+        <id>https://satoribyte.github.io/blog/network-security</id>
+        <updated>2024-09-21T12:00:00Z</updated>
+        <summary>Article about network security.</summary>
+    </entry>
+
+    <entry>
+        <title>Exploits</title>
+        <link href="https://satoribyte.github.io/blog/exploits" />
+        <id>https://satoribyte.github.io/blog/exploits</id>
+        <updated>2024-09-21T12:00:00Z</updated>
+        <summary>Article about exploits.</summary>
+    </entry>
+
+    <entry>
+        <title>Social Engineering</title>
+        <link href="https://satoribyte.github.io/blog/social-engineering" />
+        <id>https://satoribyte.github.io/blog/social-engineering</id>
+        <updated>2024-09-21T12:00:00Z</updated>
+        <summary>Article about social engineering.</summary>
+    </entry>
+
+    <entry>
+        <title>Web Application Security</title>
+        <link href="https://satoribyte.github.io/blog/web-application-security" />
+        <id>https://satoribyte.github.io/blog/web-application-security</id>
+        <updated>2024-09-21T12:00:00Z</updated>
+        <summary>Article about web application security.</summary>
+    </entry>
+
+    <entry>
+        <title>Reverse Engineering</title>
+        <link href="https://satoribyte.github.io/blog/reverse-engineering" />
+        <id>https://satoribyte.github.io/blog/reverse-engineering</id>
+        <updated>2024-09-21T12:00:00Z</updated>
+        <summary>Article about reverse engineering.</summary>
+    </entry>
+
+    <entry>
+        <title>Hacking Tools</title>
+        <link href="https://satoribyte.github.io/blog/hacking-tools" />
+        <id>https://satoribyte.github.io/blog/hacking-tools</id>
+        <updated>2024-09-21T12:00:00Z</updated>
+        <summary>Article about hacking tools.</summary>
+    </entry>
+
+    <entry>
+        <title>Malware Analysis</title>
+        <link href="https://satoribyte.github.io/blog/malware-analysis" />
+        <id>https://satoribyte.github.io/blog/malware-analysis</id>
+        <updated>2024-09-21T12:00:00Z</updated>
+        <summary>Article about malware analysis.</summary>
+    </entry>
+
+    <entry>
+        <title>Cloud Security</title>
+        <link href="https://satoribyte.github.io/blog/cloud-security" />
+        <id>https://satoribyte.github.io/blog/cloud-security</id>
+        <updated>2024-09-21T12:00:00Z</updated>
+        <summary>Article about cloud security.</summary>
+    </entry>
+
+    <entry>
+        <title>Mobile Security</title>
+        <link href="https://satoribyte.github.io/blog/mobile-security" />
+        <id>https://satoribyte.github.io/blog/mobile-security</id>
+        <updated>2024-09-21T12:00:00Z</updated>
+        <summary>Article about mobile security.</summary>
+    </entry>
+
+    <entry>
+        <title>Dark Web</title>
+        <link href="https://satoribyte.github.io/blog/dark-web" />
+        <id>https://satoribyte.github.io/blog/dark-web</id>
+        <updated>2024-09-21T12:00:00Z</updated>
+        <summary>Article about the dark web.</summary>
+    </entry>
+
+    <entry>
+        <title>Bug Bounty</title>
+        <link href="https://satoribyte.github.io/blog/bug-bounty" />
+        <id>https://satoribyte.github.io/blog/bug-bounty</id>
+        <updated>2024-09-21T12:00:00Z</updated>
+        <summary>Article about bug bounty.</summary>
+    </entry>
+
+    <entry>
+        <title>Ethical Hacking</title>
+        <link href="https://satoribyte.github.io/blog/ethical-hacking" />
+        <id>https://satoribyte.github.io/blog/ethical-hacking</id>
+        <updated>2024-09-21T12:00:00Z</updated>
+        <summary>Article about ethical hacking.</summary>
+    </entry>
+
+    <entry>
+        <title>Phishing</title>
+        <link href="https://satoribyte.github.io/blog/phishing" />
+        <id>https://satoribyte.github.io/blog/phishing</id>
+        <updated>2024-09-21T12:00:00Z</updated>
+        <summary>Article about phishing.</summary>
+    </entry>
+
+    <entry>
+        <title>IoT Security</title>
+        <link href="https://satoribyte.github.io/blog/iot-security" />
+        <id>https://satoribyte.github.io/blog/iot-security</id>
+        <updated>2024-09-21T12:00:00Z</updated>
+        <summary>Article about IoT security.</summary>
+    </entry>
+
+    <entry>
+        <title>Data Privacy</title>
+        <link href="https://satoribyte.github.io/blog/data-privacy" />
+        <id>https://satoribyte.github.io/blog/data-privacy</id>
+        <updated>2024-09-21T12:00:00Z</updated>
+        <summary>Article about data privacy.</summary>
+    </entry>
+
+</feed>
