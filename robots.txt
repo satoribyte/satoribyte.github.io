@@ -1,6 +1,4 @@
 User-agent: *
-Disallow: /
-Allow: /blog/
-Allow: /blog/*
+Disallow:
 
 Sitemap: https://satoribyte.github.io/sitemap.xml
