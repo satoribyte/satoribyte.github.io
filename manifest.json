@@ -1,0 +1,18 @@
+{
+    "name": "SatoriByte",
+    "short_name": "SatoriByte",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#121E2E",
+    "theme_color": "#121E2E",
+    "description": "Your Ultimate Source for Cutting-Edge IT and Technology Insights",
+    "icons": [
+        {
+            "src": "./icon.ico",
+            "sizes": "48x48",
+            "type": "image/x-icon"
+        }
+    ],
+    "scope": "/",
+    "prefer_related_applications": false
+}
