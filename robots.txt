@@ -2,3 +2,5 @@ User-agent: *
 Disallow:
 
 Sitemap: https://satoribyte.github.io/sitemap.xml
+Sitemap: https://satoribyte.github.io/atom.xml
+Sitemap: https://satoribyte.github.io/rss.xml
