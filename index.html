@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="global.css">
     <link rel="manifest" href="./manifest.json">
 
-    <script src="./tailwindscss.js"></script>
+    <script src="./tailwindscss.js" defer></script>
 </head>
 
 
@@ -252,8 +252,8 @@
         </div>
     </footer>
 
-    <script src="./xrefresh.js"></script>
-    <script>
+    <script src="./xrefresh.js" defer></script>
+    <script defer>
         document.getElementById('menu-toggle').addEventListener('click', () => {
             document.getElementById('mobile-menu').classList.toggle('hidden');
         });
